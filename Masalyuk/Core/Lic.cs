@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Masalyuk.Core
 {
-    class Nikita
+    class Lic
     {
         public static Dictionary<string, string> ids =
             new Dictionary<string, string>();

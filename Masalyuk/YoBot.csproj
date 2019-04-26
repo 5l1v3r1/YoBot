@@ -96,7 +96,7 @@
     <Compile Include="Core\Core.xaml.cs">
       <DependentUpon>Core.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Core\Nikita.cs" />
+    <Compile Include="Core\Lic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

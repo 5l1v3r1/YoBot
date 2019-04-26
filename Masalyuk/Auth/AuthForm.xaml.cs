@@ -68,7 +68,7 @@ namespace Masalyuk
         private void Window_Activated(object sender, EventArgs e)
         {
 
-            var n = new Nikita(); ;
+            var n = new Lic(); ;
             this.licBox.Text = n.GetPay();
         }
     }

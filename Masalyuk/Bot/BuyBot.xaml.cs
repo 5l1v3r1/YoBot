@@ -24,13 +24,15 @@ namespace Masalyuk.Bot
     /// </summary>
     public partial class BuyBot : Window
     {
-        private static bool buyCurr = true;
-        private static bool buyOrders = false;
+        private static bool _buyCurr = true;
+        private static bool _buyOrders = false;
         public BuyBot()
         {
             InitializeComponent();
         }
+/*
         private const string tapi = "https://yobit.net/tapi";
+*/
 
         private async void buyButton_Click(object sender, RoutedEventArgs e)
         {
@@ -39,7 +41,7 @@ namespace Masalyuk.Bot
             summa = BotSettings.countCurrency;
             var pair = pBox.Text.ToLower() + "_usd";
             decimal procent = Convert.ToDecimal(BotSettings.procentPlus);
-            if (buyCurr)
+            if (_buyCurr)
             {
                 var realtimecount = await Api.GetSellTask(pair); // цена в стрингах
                 decimal rlcount = Convert.ToDecimal(realtimecount); // цена в инт
@@ -53,21 +55,21 @@ namespace Masalyuk.Bot
 
             }
 
-            if (buyOrders)
+            if (_buyOrders)
             {
 
             }
         }
         private void nowCurr_Click(object sender, RoutedEventArgs e)
         {
-            buyCurr = true;
-            buyOrders = false;
+            _buyCurr = true;
+            _buyOrders = false;
         }
 
         private void orders_Click(object sender, RoutedEventArgs e)
         {
-            buyCurr = false;
-            buyOrders = true;
+            _buyCurr = false;
+            _buyOrders = true;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
