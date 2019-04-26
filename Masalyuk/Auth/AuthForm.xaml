@@ -1,0 +1,24 @@
+﻿<Window x:Class="Masalyuk.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Masalyuk"
+        mc:Ignorable="d"
+        Title="YoBuy" Height="193.105" Width="356" MaxWidth="358.526" MaxHeight="193.105" ResizeMode="CanMinimize" Activated="Window_Activated">
+    <Grid RenderTransformOrigin="0.509,0.421">
+        <Button x:Name="authButton" Content="Авторизация" HorizontalAlignment="Left" VerticalAlignment="Top" Width="146" Margin="10,129,0,0" Tag="3" IsDefault="True" Click="authButton_Click"/>
+        <GroupBox Header="Авторизация" HorizontalAlignment="Left" Height="124" VerticalAlignment="Top" Width="325" Margin="10,0,0,0">
+            <Grid HorizontalAlignment="Left" Height="112" Margin="0,-10,-2,0" VerticalAlignment="Top" Width="315">
+                <TextBlock x:Name="textKey" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,21,0,0" Height="23" FontSize="14"><Run Text="API Key :"/></TextBlock>
+                <TextBox x:Name="secretBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" Margin="69,49,0,0" Tag="2"/>
+                <TextBox x:Name="keyBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" Margin="69,21,0,0" Tag="1"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Secret :" VerticalAlignment="Top" Margin="10,49,0,0" FontSize="14"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="LicKey :" VerticalAlignment="Top" Margin="9,77,0,0" FontSize="14" RenderTransformOrigin="-1.522,-2.105"/>
+                <TextBox x:Name="licBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" Margin="69,77,0,0" IsReadOnly ="true"/>
+            </Grid>
+        </GroupBox>
+        <Button x:Name="whyButt" Content="Не авторизовывается?" HorizontalAlignment="Left" VerticalAlignment="Top" Width="164" Margin="171,129,0,0" Click="whyButt_Click"/>
+
+    </Grid>
+</Window>
